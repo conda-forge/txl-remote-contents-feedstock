@@ -1,13 +1,13 @@
 {% set name = "txl-remote-contents" %}
-{% set version = "0.2.14" %}
+{% set version = "0.2.15" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/txl_remote_contents-{{ version }}.tar.gz
-  sha256: 9810d985e65e327351194443d01fa830be72039a121fd8c79cc073ded114dab7
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/txl_remote_contents-{{ version }}.tar.gz
+  sha256: 22a19b177385a2e4045ac910dbff510349bac80d679c9d21522fb82c18bafcd5
 
 build:
   noarch: python
@@ -24,9 +24,9 @@ requirements:
     - txl >=0.2.18,<0.3.0
     - httpx >=0.23.1
     - httpx-ws >=0.4.2
-    - pycrdt >=0.8.11,<0.9.0
-    - pycrdt-websocket >=0.13.0,<0.14.0
-    - jupyter_ydoc >=2.0.0,<3.0.0
+    - pycrdt >=0.10.9,<0.11.0
+    - pycrdt-websocket >=0.15.3,<0.16.0
+    - jupyter_ydoc >=3.0.2,<4.0.0
 
 test:
   # `pip check` was disabled, see: https://github.com/conda-forge/staged-recipes/pull/26869
