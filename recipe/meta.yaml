@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "txl-remote-contents" %}
-{% set version = "0.2.15" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/txl_remote_contents-{{ version }}.tar.gz
-  sha256: 22a19b177385a2e4045ac910dbff510349bac80d679c9d21522fb82c18bafcd5
+  sha256: 99e60d85bf022768969d53ceb7b9df6f92083769c102d37b6d2b0beb74a89891
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
